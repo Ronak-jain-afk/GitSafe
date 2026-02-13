@@ -16,7 +16,7 @@ A CLI tool that scans staged Git changes before commit and blocks sensitive data
 ## Installation
 
 ```bash
-pip install gitsafe
+pip install gitsafe-scan
 ```
 
 ## Quick Start
@@ -158,7 +158,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
-      - run: pip install gitsafe
+      - run: pip install gitsafe-scan
       - name: Scan
         run: |
           gitsafe scan --ci \
@@ -176,7 +176,7 @@ jobs:
 secret-scan:
   stage: test
   script:
-    - pip install gitsafe
+    - pip install gitsafe-scan
     - gitsafe scan --ci --format json --output gl-secret-report.json
       --from $CI_MERGE_REQUEST_DIFF_BASE_SHA --to $CI_COMMIT_SHA
   artifacts:

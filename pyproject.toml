@@ -3,13 +3,13 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "gitsafe"
+name = "gitsafe-scan"
 version = "1.0.0"
 description = "A CLI tool that scans staged Git changes before commit and blocks sensitive data, secrets, and insecure patterns from entering a repository."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.9"
-authors = [{ name = "GitSafe Contributors" }]
+authors = [{ name = "Ronak Jain" }]
 keywords = ["git", "security", "secrets", "scanner", "pre-commit"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -55,3 +55,8 @@ src = ["src", "tests"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "N", "UP", "B", "SIM"]
+
+[project.urls]
+Homepage = "https://github.com/Ronak-jain-afk/gitsafe"
+Repository = "https://github.com/Ronak-jain-afk/gitsafe"
+Issues = "https://github.com/Ronak-jain-afk/gitsafe/issues"
