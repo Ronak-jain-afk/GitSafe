@@ -1,0 +1,21 @@
+# GitSafe configuration for the GitSafe project itself
+version = "1.0"
+
+[scan]
+fail_on = "high"
+
+[ignore]
+# Test files contain intentional fake secrets
+files = ["tests/*", "tests/**/*"]
+
+[allowlist]
+# Example/placeholder values used in docs and rules
+patterns = [
+    "AKIAIOSFODNN7EXAMPLE",
+    "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+    "example",
+    "test",
+    "REAL123",     # Our test fixture fake key suffix
+    "_readerthread",
+    "github/codeql-action",
+]

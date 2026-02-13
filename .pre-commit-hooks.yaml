@@ -1,0 +1,8 @@
+- id: gitsafe
+  name: GitSafe Secret Scanner
+  entry: gitsafe scan
+  language: python
+  stages: [pre-commit]
+  always_run: true
+  pass_filenames: false
+  description: Scan staged changes for secrets, API keys, and sensitive data.
