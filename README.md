@@ -6,7 +6,7 @@ A CLI tool that scans staged Git changes before commit and blocks sensitive data
 
 - **Pre-commit hook** — catches secrets before they're committed
 - **CI mode** — scans PR/push diffs in pipelines (GitHub Actions, GitLab CI, etc.)
-- **25+ built-in rules** — AWS keys, JWTs, private keys, passwords, .env files, and more
+- **24 built-in rules** — AWS keys, JWTs, private keys, passwords, .env files, and more
 - **Entropy detection** — finds high-entropy strings that may be secrets
 - **Inline suppression** — `#gitsafe-ignore` with optional rule scoping
 - **Custom rules** — define your own via YAML files
@@ -221,6 +221,7 @@ repos:
 | `GENERIC_TOKEN` | secret | medium | Generic token assignments |
 | `PRIVATE_KEY` | key | critical | PEM private keys |
 | `PGP_PRIVATE_KEY` | key | critical | PGP private key blocks |
+| `PKCS12_FILE` | key | high | PKCS#12/PFX certificate bundles |
 | `HARDCODED_PASSWORD` | credential | high | Password assignments |
 | `CONNECTION_STRING` | credential | high | DB connection strings |
 | `BASIC_AUTH_URL` | credential | high | URLs with embedded credentials |
